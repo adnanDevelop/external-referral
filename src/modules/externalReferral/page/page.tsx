@@ -35,13 +35,13 @@ const ExternalReferral = () => {
             Request a new appointment
           </h2>
 
-          <p className="text-black 3xl:text-[20px] md:text-lg text-base mb-2.5">
+          <p className="text-black 3xl:text-[20px] md:text-lg text-base mb-3.5">
             Please note that to make an appointment, you will first need a
             referral from your GP.
           </p>
 
           <p className="mb-1 font-bold text-black ">Submit your referral </p>
-          <p className="text-center leading-[22px] md:text-lg text-base 3xl:text-[20px] w-full mx-auto">
+          <p className="text-center md:text-lg text-base 3xl:text-[20px] !leading-[22px] w-full mx-auto">
             You can use this form to submit your referral and request an
             appointment. Please provide your details and upload the referral
             from your GP. After submitting the form, your referral will be
@@ -51,7 +51,7 @@ const ExternalReferral = () => {
 
         {/* Form section */}
         <form
-          className="grid w-full grid-cols-12 lg:gap-[80px] mt-[25px]"
+          className="grid w-full grid-cols-12 lg:gap-x-[70px] lg:gap-y-[40px] mt-[25px]"
           onSubmit={handleSubmit(submitData)}
         >
           {/* Form inputs */}
@@ -59,18 +59,18 @@ const ExternalReferral = () => {
             <div>
               {/* Clinic details */}
               <div>
-                <h3 className="2xl:text-[25px] text-base font-roboto ">
+                <h3 className="xl:text-[24px] md:text-[20px] text-[#000000DE] text-base font-roboto ">
                   Desired service
                 </h3>
 
                 {/* Department select option */}
-                <div className="items-center gap-3 mt-6 md:flex">
-                  <div className="basis-1/5">
-                    <p className="text-[13px] text-[#757575] text-nowrap ">
+                <div className="items-center gap-2 mt-3 md:flex">
+                  <div className=" w-full xl:w-[30%] mb-1 md:w-[30%] lg:w-[40%]">
+                    <p className="text-sm text-[#757575] text-nowrap ">
                       Clinic/Department
                     </p>
                   </div>
-                  <div className="basis-4/5">
+                  <div className="w-full xl:w-[70%] lg:w-[60%]">
                     <MultiSelect
                       options={options}
                       onChange={(value) => {
@@ -81,13 +81,13 @@ const ExternalReferral = () => {
                 </div>
 
                 {/* Consultant select option */}
-                <div className="items-center gap-3 mt-6 md:flex">
-                  <div className="basis-1/5">
-                    <p className="text-[13px] text-[#757575] text-nowrap ">
+                <div className="items-center gap-2 mt-3 md:flex">
+                  <div className=" w-full xl:w-[30%] mb-1 md:w-[30%] lg:w-[40%]">
+                    <p className="text-sm text-[#757575] text-nowrap ">
                       Consultant
                     </p>
                   </div>
-                  <div className="basis-4/5">
+                  <div className="w-full xl:w-[70%] lg:w-[60%]">
                     <MultiSelect
                       options={options}
                       onChange={(value) =>
@@ -100,18 +100,18 @@ const ExternalReferral = () => {
 
               {/* Patient details */}
               <div className="mt-6 ">
-                <h3 className="2xl:text-[25px] text-base font-roboto mb-6">
+                <h3 className="xl:text-[24px] md:text-[20px] text-[#000000DE] text-base font-roboto mb-6">
                   Your Patient Details
                 </h3>
 
                 {/* Fullname input */}
-                <div className="items-center gap-3 md:flex">
-                  <div className="basis-1/5">
-                    <p className="text-[13px] text-[#757575] text-nowrap ">
+                <div className="items-center gap-2 md:flex">
+                  <div className=" w-full xl:w-[30%] mb-1 md:w-[30%] lg:w-[40%]">
+                    <p className="text-sm text-[#757575] text-nowrap ">
                       Full Name
                     </p>
                   </div>
-                  <div className="basis-4/5">
+                  <div className="w-full xl:w-[70%] lg:w-[60%]">
                     <Input
                       name="fullName"
                       type="text"
@@ -123,13 +123,13 @@ const ExternalReferral = () => {
                 </div>
 
                 {/* Email input */}
-                <div className="items-center gap-3 mt-3 md:flex">
-                  <div className="basis-1/5">
-                    <p className="text-[13px] text-[#757575] text-nowrap ">
+                <div className="items-center gap-2 mt-3 md:flex">
+                  <div className=" w-full xl:w-[30%] mb-1 md:w-[30%] lg:w-[40%]">
+                    <p className="text-sm text-[#757575] text-nowrap ">
                       Email Address
                     </p>
                   </div>
-                  <div className="basis-4/5">
+                  <div className="w-full xl:w-[70%] lg:w-[60%]">
                     <Input
                       name="input"
                       type="email"
@@ -141,13 +141,13 @@ const ExternalReferral = () => {
                 </div>
 
                 {/* Mobile number input */}
-                <div className="items-center gap-3 mt-3 md:flex">
-                  <div className="basis-1/5">
-                    <p className="text-[13px] text-[#757575] text-nowrap ">
+                <div className="items-center gap-2 mt-3 md:flex">
+                  <div className=" w-full xl:w-[30%] mb-1 md:w-[30%] lg:w-[40%]">
+                    <p className="text-sm text-[#757575] text-nowrap ">
                       Telephone
                     </p>
                   </div>
-                  <div className="basis-4/5">
+                  <div className="w-full xl:w-[70%] lg:w-[60%]">
                     <Input
                       name="phone_number"
                       type="tel"
@@ -167,12 +167,12 @@ const ExternalReferral = () => {
           </div>
 
           {/* Referral upload section */}
-          <div className="lg:col-span-7 col-span-full">
+          <div className="mt-6 lg:col-span-7 col-span-full lg:mt-0">
             <div>
-              <h3 className="2xl:text-[25px] text-base font-roboto mb-3">
+              <h3 className="xl:text-[24px] md:text-[20px] text-[#000000DE] text-base font-roboto mb-6">
                 Referral Letter
               </h3>
-              <p className="text-black 3xl:text-[20px] md:text-lg text-base mb-2.5">
+              <p className="text-black text-sm mb-2.5 leading-none">
                 Appointments require a referral letter which you can upload
                 here.
               </p>
@@ -185,11 +185,11 @@ const ExternalReferral = () => {
 
             {/* Additional information */}
             <div className="mt-5">
-              <h3 className="2xl:text-[25px] text-base font-roboto mb-3.5">
+              <h3 className="xl:text-[24px] md:text-[20px] text-[#000000DE] text-base font-roboto mb-3.5">
                 Additional Information
               </h3>
 
-              <p className="leading-[22px] md:text-lg text-base 3xl:text-[20px]">
+              <p className="text-sm font-poppin">
                 Please add any additional information relevant to your referral.
                 Please indictae if this is your initial appointment or renewal
                 appointment.
@@ -201,7 +201,7 @@ const ExternalReferral = () => {
               ></textarea>
             </div>
           </div>
-          <div className="flex items-cenc:\Users\adnan\AppData\Local\CapCut\Videos\0819.mp4ter justify-center col-span-full">
+          <div className="flex items-center justify-center mt-6 lg:mt-0 col-span-full">
             <Button outline className="border-none">
               Cancel
             </Button>
