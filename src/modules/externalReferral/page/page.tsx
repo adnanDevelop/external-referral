@@ -41,7 +41,7 @@ const ExternalReferral = () => {
           </p>
 
           <p className="mb-1 font-bold text-black ">Submit your referral </p>
-          <p className="text-center md:text-lg text-base 3xl:text-[20px] !leading-[22px] w-full mx-auto">
+          <p className="text-center md:text-lg text-base 3xl:text-[20px] !leading-[24px] w-full mx-auto">
             You can use this form to submit your referral and request an
             appointment. Please provide your details and upload the referral
             from your GP. After submitting the form, your referral will be
