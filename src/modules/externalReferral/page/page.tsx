@@ -1,14 +1,12 @@
-// import PhoneInput from "react-phone-input-2";
-import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { ICreateReferralProp } from "../type";
 import Navbar from "../../../components/global/Navbar";
 import { Button, Input, MultiSelect } from "../../../components/ui";
+import UploadReferralFile from "../component/UploadReferralFile";
 
 const ExternalReferral = () => {
   const { register, handleSubmit, setValue } = useForm<ICreateReferralProp>();
 
-  const hiddenFileInputRef = useRef<HTMLInputElement>(null);
   const options: { label: string; value: string }[] = [
     {
       label: "Beacon Hospital",
@@ -19,12 +17,6 @@ const ExternalReferral = () => {
       value: "GM Hospital",
     },
   ];
-
-  const handleClick = () => {
-    if (hiddenFileInputRef.current) {
-      hiddenFileInputRef.current.click();
-    }
-  };
 
   const submitData = (data: ICreateReferralProp) => {
     console.log(data);
@@ -166,10 +158,10 @@ const ExternalReferral = () => {
                   </div>
                 </div>
 
-                {/* Captcha */}
+                {/* Captcha 
                 <div className="flex justify-end mt-8">
                   <img src="/image/capcha-img.png" alt="" />
-                </div>
+                </div>*/}
               </div>
             </div>
           </div>
@@ -187,39 +179,8 @@ const ExternalReferral = () => {
             </div>
 
             {/* Referral upload input */}
-            <div
-              className="w-full h-[120px] border rounded-md border-dashed border-gray-500 flex flex-col justify-end items-center cursor-pointer pb-[10px]"
-              onClick={handleClick}
-            >
-              <input className="hidden" type="file" ref={hiddenFileInputRef} />
-
-              <p className="text-base font-roboto text-[#000000DE] flex gap-1 ">
-                <span className="cursor-pointer underline text-[#2196F3]">
-                  Click to upload
-                </span>
-                or drag and drop your referral
-              </p>
-              <p className="text-sm font-roboto text-[#000000DE] mt-0.5">
-                pdf, doc, txt, rtf, docx (max. 3MB)
-              </p>
-            </div>
-
-            {/* Drag and drop upload input */}
-            <div
-              className="w-full h-[100px] border rounded-md border-dashed border-gray-500 flex flex-col justify-end items-center mt-6 cursor-pointer pb-[10px]"
-              onClick={handleClick}
-            >
-              <input className="hidden" type="file" ref={hiddenFileInputRef} />
-
-              <p className="text-base font-roboto text-[#000000DE] flex gap-1 ">
-                <span className="cursor-pointer underline text-[#2196F3]">
-                  Click to upload
-                </span>
-                or drag and drop other information such as test results
-              </p>
-              <p className="text-sm font-roboto text-[#000000DE] mt-0.5">
-                pdf, doc, txt, rtf, docx (max. 3MB)
-              </p>
+            <div>
+              <UploadReferralFile />
             </div>
 
             {/* Additional information */}
