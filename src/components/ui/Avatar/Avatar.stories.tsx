@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from "@storybook/react";
 
-import Avatar from './index';
+import Avatar from "./index";
 
 const meta: Meta<typeof Avatar> = {
   component: Avatar,
@@ -11,18 +11,18 @@ type Story = StoryObj<typeof Avatar>;
 
 export const Image: Story = {
   args: {
-    type: 'image',
+    type: "image",
     imageProps: {
-      src: 'https://i.pravatar.cc/300',
-      alt: 'Avatar',
+      src: "https://i.pravatar.cc/300",
+      alt: "Avatar",
     },
   },
 };
 export const Placeholder: Story = {
   args: {
-    type: 'placeholder',
+    type: "placeholder",
     placeholderProps: {
-      placeholder: 'JD',
+      placeholder: "JD",
     },
   },
 };

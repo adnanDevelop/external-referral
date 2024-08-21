@@ -1,20 +1,15 @@
 // import PhoneInput from "react-phone-input-2";
-import { useForm } from "react-hook-form";
 import { useRef } from "react";
+import { useForm } from "react-hook-form";
+import { ICreateReferralProp } from "../type";
 import Navbar from "../../../components/global/Navbar";
 import { Button, Input, MultiSelect } from "../../../components/ui";
-import { ICreateReferralProp } from "../type";
 
 const ExternalReferral = () => {
-  const {
-    register,
-    handleSubmit,
-    setValue,
-    // formState: { errors },
-  } = useForm<ICreateReferralProp>();
+  const { register, handleSubmit, setValue } = useForm<ICreateReferralProp>();
 
   const hiddenFileInputRef = useRef<HTMLInputElement>(null);
-  const options = [
+  const options: { label: string; value: string }[] = [
     {
       label: "Beacon Hospital",
       value: "Beacon Hospital",
@@ -87,7 +82,7 @@ const ExternalReferral = () => {
                     <MultiSelect
                       options={options}
                       onChange={(value) => {
-                        setValue("department", value);
+                        setValue("department", value.toString());
                       }}
                     />
                   </div>
@@ -103,7 +98,9 @@ const ExternalReferral = () => {
                   <div className="basis-4/5">
                     <MultiSelect
                       options={options}
-                      onChange={(value) => setValue("consultant", value)}
+                      onChange={(value) =>
+                        setValue("consultant", value.toString())
+                      }
                     />
                   </div>
                 </div>

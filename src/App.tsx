@@ -1,6 +1,6 @@
-import ToastProvider from "./components/ui/Toast/ToastProvider";
-import { ReduxProvider } from "./redux/Provider";
 import { Router } from "./routes/Router";
+import { ReduxProvider } from "./redux/Provider";
+import ToastProvider from "./components/ui/Toast/ToastProvider";
 
 function App() {
   return (
