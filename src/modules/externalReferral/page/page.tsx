@@ -185,6 +185,7 @@ const ExternalReferral = () => {
                 here.
               </p>
             </div>
+
             {/* Referral upload input */}
             <div
               className="w-full h-[120px] border rounded-md border-dashed border-gray-500 flex flex-col justify-end items-center cursor-pointer pb-[10px]"
