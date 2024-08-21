@@ -57,7 +57,7 @@ const UploadReferralFile = () => {
     <section>
       {/* First upload input */}
       <div
-        className="w-full h-[100px] border rounded-md border-dashed border-gray-500 flex flex-col justify-end items-center cursor-pointer pb-[10px]"
+        className="w-full px-2 h-[120px] border rounded-md border-dashed border-gray-500 flex flex-col justify-center items-center cursor-pointer pb-[10px]"
         onClick={() => handleClick(hiddenFileInputRef1)}
       >
         <input
@@ -69,7 +69,7 @@ const UploadReferralFile = () => {
           disabled={uploadState1.fileName ? true : false}
         />
 
-        <p className="text-base font-roboto text-[#000000DE] flex gap-1 ">
+        <p className="md:text-base text-sm font-roboto text-[#000000DE] flex gap-1 ">
           <span className="cursor-pointer underline text-[#2196F3]">
             Click to upload
           </span>
@@ -85,7 +85,7 @@ const UploadReferralFile = () => {
             <MdOutlineUploadFile
               className={`text-[25px] ${
                 uploadState1.status === "uploading"
-                  ? "text-primary"
+                  ? "text-[#2196F3]"
                   : uploadState1.status === "success"
                     ? "text-green-500"
                     : "text-red-500"
@@ -109,7 +109,7 @@ const UploadReferralFile = () => {
               <div
                 className={`w-[200px] h-[4px] rounded-full mt-1.5 ${
                   uploadState1.status === "uploading"
-                    ? "bg-[#13018593]"
+                    ? "bg-[#2195f38a]"
                     : uploadState1.status === "success"
                       ? "bg-green-200"
                       : "bg-red-200"
@@ -118,7 +118,7 @@ const UploadReferralFile = () => {
                 <div
                   className={`h-full rounded-full ${
                     uploadState1.status === "uploading"
-                      ? "bg-primary"
+                      ? "bg-[#2196F3]"
                       : uploadState1.status === "success"
                         ? "bg-green-500"
                         : "bg-red-500"
@@ -131,7 +131,7 @@ const UploadReferralFile = () => {
               </div>
             </div>
             <button
-              className="text-[#000000a5] text-lg transitions hover:text-primary"
+              className="text-[#000000a5] text-lg transitions hover:text-[#2196F3]"
               onClick={() => {
                 setUploadState1({
                   status: "none",
@@ -151,7 +151,7 @@ const UploadReferralFile = () => {
 
       {/* Second upload input */}
       <div
-        className="w-full h-[100px] mt-3 border rounded-md border-dashed border-gray-500 flex flex-col justify-center items-center cursor-pointer pb-[10px]"
+        className="w-full  px-2 h-[120px] mt-3 border rounded-md border-dashed border-gray-500 flex flex-col justify-center items-center cursor-pointer pb-[10px]"
         onClick={() => handleClick(hiddenFileInputRef2)}
       >
         <input
@@ -163,13 +163,13 @@ const UploadReferralFile = () => {
           disabled={uploadState2.fileName ? true : false}
         />
 
-        <p className="text-base font-roboto text-[#000000DE] flex gap-1 ">
-          <span className="cursor-pointer underline text-[#2196F3]">
+        <p className="md:text-base text-sm font-roboto text-[#000000DE]  text-wrap text-center">
+          <span className="cursor-pointer underline text-[#2196F3] me-1">
             Click to upload
           </span>
           or drag and drop other information such as test results
         </p>
-        <p className="text-sm font-roboto text-[#00000099] mt-0.5">
+        <p className="text-sm text-nowrap font-roboto text-[#00000099] mt-0.5">
           pdf, doc, txt, rtf, docx (max. 3MB)
         </p>
       </div>
@@ -179,7 +179,7 @@ const UploadReferralFile = () => {
             <MdOutlineUploadFile
               className={`text-[25px] ${
                 uploadState2.status === "uploading"
-                  ? "text-primary"
+                  ? "text-[#2196F3]"
                   : uploadState2.status === "success"
                     ? "text-green-500"
                     : "text-red-500"
@@ -203,7 +203,7 @@ const UploadReferralFile = () => {
               <div
                 className={`w-[200px] h-[4px] rounded-full mt-1.5 ${
                   uploadState2.status === "uploading"
-                    ? "bg-[#13018593]"
+                    ? "bg-[#2195f38a]"
                     : uploadState2.status === "success"
                       ? "bg-green-200"
                       : "bg-red-200"
@@ -212,7 +212,7 @@ const UploadReferralFile = () => {
                 <div
                   className={`h-full rounded-full ${
                     uploadState2.status === "uploading"
-                      ? "bg-primary"
+                      ? "bg-[#2196F3]"
                       : uploadState2.status === "success"
                         ? "bg-green-500"
                         : "bg-red-500"
@@ -225,7 +225,7 @@ const UploadReferralFile = () => {
               </div>
             </div>
             <button
-              className="text-[#000000a5] text-lg transitions hover:text-primary"
+              className="text-[#000000a5] text-lg transitions hover:text-[#2196F3]"
               onClick={() => {
                 setUploadState2({
                   status: "none",

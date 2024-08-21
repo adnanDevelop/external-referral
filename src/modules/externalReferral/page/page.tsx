@@ -28,20 +28,25 @@ const ExternalReferral = () => {
         <Navbar />
       </header>
 
-      <main className="mt-3 max-w-[1300px] mx-auto px-[25px]">
+      <main className="mt-3 3xl:max-w-[1200px] max-w-[1300px] mx-auto px-[25px]">
         {/* Title section */}
         <section className="text-center">
           <h2 className="3xl:text-[48px] md:text-[30px] text-[25px] text-primary ">
             Request a new appointment
           </h2>
 
-          <p className="text-black 3xl:text-[20px] md:text-lg text-base mb-3.5">
+          <p className="text-black 3xl:text-[20px] text-base mb-3.5">
             Please note that to make an appointment, you will first need a
             referral from your GP.
           </p>
 
-          <p className="mb-1 font-bold text-black ">Submit your referral </p>
-          <p className="text-center md:text-lg text-base 3xl:text-[20px] !leading-[24px] w-full mx-auto">
+          <p className="mb-1 text-base font-bold text-black">
+            Submit your referral{" "}
+          </p>
+          <p
+            className="text-justify md:text-center text-base 3xl:text-[20px] !leading-[24px] w-full mx-auto"
+            style={{ textAlignLast: "center" }}
+          >
             You can use this form to submit your referral and request an
             appointment. Please provide your details and upload the referral
             from your GP. After submitting the form, your referral will be
@@ -172,7 +177,7 @@ const ExternalReferral = () => {
               <h3 className="xl:text-[24px] md:text-[20px] text-[#000000DE] text-base font-roboto mb-6">
                 Referral Letter
               </h3>
-              <p className="text-black text-sm mb-2.5 leading-none">
+              <p className="text-black text-sm mb-2.5">
                 Appointments require a referral letter which you can upload
                 here.
               </p>
@@ -189,7 +194,7 @@ const ExternalReferral = () => {
                 Additional Information
               </h3>
 
-              <p className="text-sm font-poppin">
+              <p className="text-sm text-justify font-poppin">
                 Please add any additional information relevant to your referral.
                 Please indictae if this is your initial appointment or renewal
                 appointment.
