@@ -64,7 +64,7 @@ const ExternalReferral = () => {
                 </h3>
 
                 {/* Department select option */}
-                <div className="items-center gap-2 mt-3 md:flex">
+                <div className="items-center gap-2 mt-6 md:flex">
                   <div className=" w-full xl:w-[30%] mb-1 md:w-[30%] lg:w-[40%]">
                     <p className="text-sm text-[#757575] text-nowrap ">
                       Clinic/Department
